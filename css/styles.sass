@@ -1,0 +1,74 @@
+---
+---
+
+$background-color: #F5F3ED
+$primary-color: #101053
+
+
+body
+	background-color: $background-color
+	color: $primary-color
+	font-size: 16px
+
+.nav-container
+	display: flex
+	justify-content: center
+
+	div
+		padding: 27px 10px
+
+
+// Main Page
+.block-wrapper
+	display: grid
+	grid-template-columns: 1fr 1fr 1fr
+	grid-gap: 24px
+	margin-bottom: 70px
+	.block
+		background-color: #ffffff
+		padding: 40px
+		.position
+			font-size: 37px
+
+.pane
+	padding: 70px 0px
+	display: grid
+	grid-template-columns: repeat(2, minmax(0, 1fr))
+	grid-gap: 100pxs
+
+.pane-header
+	font-size: 50px
+	line-height: 60px
+	margin-bottom: 20px
+	&.center
+		text-align: center
+
+.section-header
+	font-size: 37px
+	margin-bottom: 80px
+	&.center
+		text-align: center
+
+.faq-wrapper
+	border-top: 1px solid $primary-color
+	.faq-item
+		.faq-subject
+			display: flex
+			padding: 24px 0px
+			border-bottom: 1px solid $primary-color
+			justify-content: space-between
+		.faq-body
+			display: none
+
+.full-pane
+	padding: 70px 0px
+
+button
+	padding: 9px 32px 12px
+	background-color: $primary-color
+	color: #ffffff
+	border-radius: 25px
+
+footer
+	background-color: #ffffff
+	padding: 120px 0px 240px
