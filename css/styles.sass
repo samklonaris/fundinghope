@@ -66,8 +66,9 @@ body
 	margin-bottom: 20px
 	&.center
 		text-align: center
-	@media (min-width: 991px)
-		max-width: 380px
+	&.fixed-width
+		@media (min-width: 991px)
+			max-width: 380px
 	@media (max-width: 750px)
 		text-align: center
 
@@ -125,15 +126,18 @@ button.btn.btn-primary
 	border-radius: 25px
 	border: 1px solid $primary-color
 
-form
-	.form-group
-		input
-			display: inline-block
-			width: 285px
-			border: 1px solid $primary-color
-			background-color: transparent
-			border-radius: 25px
-			height: 43px
+.hbspt-form
+	form
+		label
+			display: none
+		.form-group
+			input
+				display: inline-block
+				width: 285px
+				border: 1px solid $primary-color
+				background-color: transparent
+				border-radius: 25px
+				height: 43px
 
 .email-form
 	input

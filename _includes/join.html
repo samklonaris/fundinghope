@@ -4,7 +4,7 @@
 	</div>
 	<div class="pricing">
 		<div class="section-header">Get access to Funding Hope for $10 a month.</div>
-		<button type="button" class="btn btn-primary">Get on the list</button>
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#join-modal">Get on the list</button>
 		<div class="item-list">
 			<div class="item">Get a curated feed of photos, videos, and updates directly from the research community.</div>
 			<div class="item">Provide your experience and thoughts with researchers directly, and share what progress you’d like to see on endometriosis research.</div>
@@ -15,12 +15,17 @@
 	</div>
 	<div class="full-pane center email-form">
 		<div class="pane-header">Want to help but not ready to commit?</div>
-		<form>
-			<div class="form-group">
-				<input type="email" class="form-control" placeholder="Enter your email" />
-				<button type="button" class="btn btn-primary">Send</button>
-			</div>
-		</form>
+		<!--[if lte IE 8]>
+		<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+		<![endif]-->
+		<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+		<script>
+		  hbspt.forms.create({
+			region: "na1",
+			portalId: "10845",
+			formId: "1307cdfe-02f7-4ac7-8e53-ee824da7e09a"
+		});
+		</script>
 	</div>
 	{% include faq.html %}
 </div>
