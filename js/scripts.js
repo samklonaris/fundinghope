@@ -8,7 +8,7 @@ function setup() {
 
 	// move hero image
 	var HERO_1_OFFSET = 50
-	var HERO_2_OFFSET = -300
+	var HERO_2_OFFSET = -100
 	$(window).on("load resize scroll", function() {
 	  $("#hero-pane").each(function() {
 	  	// No scroll on mobile
