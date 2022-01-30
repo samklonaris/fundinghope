@@ -15,6 +15,7 @@ body
 	color: $primary-color
 	font-family: $default-font-family
 	font-size: 16px
+	overflow-x: hidden
 	div
 		line-height: 160%
 	a
@@ -55,9 +56,10 @@ body
 		justify-content: center
 	@media (max-width: 992px)
 		grid-gap: 20px
-		img
-			width: 350px
-			height: 350px
+		&:not(#hero-pane)
+			img
+				width: 350px
+				height: 350px
 	@media (max-width: 750px)
 		padding: 35px
 		grid-template-columns: 1fr
@@ -80,14 +82,46 @@ body
 
 #hero-pane
 	position: relative
+	padding-bottom: 0px
 	.pane-header
 		margin-bottom: 40px
 	button
 		margin-bottom: 40px
-	#hero-2
-		position: absolute
-		bottom: -300px
-		right: 200px
+	#hero-1-hidden
+		position: relative
+		top: 0px
+		opacity: 0
+	@media (min-width: 1191px)
+		#hero-1
+			position: absolute
+			top: 70px
+			right: 0px
+		#hero-2
+			position: absolute
+			bottom: -300px
+			right: 200px
+	@media (max-width: 1190px)
+		grid-template-columns: 1fr
+		padding-bottom: 70px
+		img
+			width: 45%
+			position: relative
+		#hero-1
+			right: -50%
+		#hero-2
+			position: absolute
+			bottom: 30px
+			right: 31%
+	
+	@media (max-width: 750px)
+		padding-bottom: 70px
+		#hero-1
+			position: relative
+			right: -70px
+		#hero-2
+			position: absolute
+			bottom: 15px
+			left: 40px
 	@media (max-width: 750px)
 		padding-top: 35px
 
