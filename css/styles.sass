@@ -100,14 +100,16 @@ body
 	border-top: 1px solid $primary-color
 	.faq-item
 		border-bottom: 1px solid $primary-color
-		&:hover
-			cursor: pointer
 		.faq-subject
 			display: flex
 			padding: 24px 0px
 			justify-content: space-between
+			&:hover
+				cursor: pointer
 		.faq-body
 			padding-bottom: 24px
+			a
+				border-bottom: 1px solid $primary-color
 			&.hidden
 				display: none
 		.arrow-img
@@ -127,17 +129,50 @@ button.btn.btn-primary
 	border: 1px solid $primary-color
 
 .hbspt-form
+	width: 100%
+	margin: 0 auto
 	form
+		display: flex
+		justify-content: center
+	.field
+		max-width: 100% !important
+		width: 285px
+		display: inline-block
+		vertical-align: top
 		label
 			display: none
-		.form-group
-			input
-				display: inline-block
-				width: 285px
-				border: 1px solid $primary-color
-				background-color: transparent
-				border-radius: 25px
-				height: 43px
+		ul
+			padding-inline-start: 0px
+			list-style-type: none
+			li
+				text-align: center
+			label
+				font-size: 14px
+				display: block
+			label
+				&::marker
+					display: none
+	input
+		width: 100%
+		border-radius: 100px
+	.input
+		input
+			padding: 4px 32px 4px
+			background-color: transparent
+			border-style: solid
+			border: 1px solid $primary-color
+	.hs_error_rollup
+		display: none
+	.hs_submit
+		display: inline-block
+		margin-left: 10px
+		vertical-align: top
+		input
+			padding: 4px 32px 4px
+			background-color: $primary-color
+			color: #ffffff
+			border-radius: 100px
+			border: 1px solid $primary-color
 
 .email-form
 	input
