@@ -13,7 +13,7 @@ function setup() {
 	    var windowTop = $(window).scrollTop();
 	    var elementTop = $(this).offset().top;
 	    var bottomPosition = windowTop - elementTop + HERO_2_OFFSET;
-	    if (bottomPosition <= 100) {
+	    if (bottomPosition <= 400) {
 	    	$(this).find("#hero-2").css({ bottom: bottomPosition });
 	    }
 	  });

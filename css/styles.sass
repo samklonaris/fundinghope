@@ -1,7 +1,7 @@
 ---
 ---
 
-$background-color: #F5F3ED
+$background-color: #F3F1F0
 $primary-color: #222222
 
 @font-face
@@ -16,7 +16,7 @@ body
 	font-family: $default-font-family
 	font-size: 16px
 	div
-		line-height: 32px
+		line-height: 160%
 	a
 		color: $primary-color	
 		padding-bottom: 1px
@@ -49,6 +49,10 @@ body
 	display: grid
 	grid-template-columns: repeat(2, minmax(0, 1fr))
 	grid-gap: 100px
+	.content-wrapper
+		display: flex
+		flex-direction: column
+		justify-content: center
 	@media (max-width: 992px)
 		grid-gap: 20px
 		img
@@ -62,13 +66,13 @@ body
 
 .pane-header
 	font-size: 50px
-	line-height: 60px
+	line-height: 120%
 	margin-bottom: 20px
 	&.center
 		text-align: center
 	&.fixed-width
 		@media (min-width: 991px)
-			max-width: 380px
+			max-width: 425px
 			&.center
 				margin: 0 auto
 	@media (max-width: 750px)
@@ -76,10 +80,6 @@ body
 
 #hero-pane
 	position: relative
-	.content-wrapper
-		padding-top: 70px
-		@media (max-width: 750px)
-			padding-top: 0px
 	.pane-header
 		margin-bottom: 40px
 	button
@@ -161,7 +161,7 @@ button.btn.btn-primary
 		border-radius: 100px
 	.input
 		input
-			padding: 4px 32px 4px
+			padding: 8px 32px 8px
 			background-color: transparent
 			border-style: solid
 			border: 1px solid $primary-color
@@ -172,7 +172,7 @@ button.btn.btn-primary
 		margin-left: 10px
 		vertical-align: top
 		input
-			padding: 4px 32px 4px
+			padding: 8px 32px 8px
 			background-color: $primary-color
 			color: #ffffff
 			border-radius: 100px
@@ -215,10 +215,29 @@ footer
 	padding-bottom: 120px
 	.hero
 		.pane-header
-			max-width: 700px
+			font-size: 70px
+			line-height: 120%
+			@media (min-width: 991px)
+				max-width: 900px
+		.description
+			font-size: 20px
+			line-height: 160%
+			@media (min-width: 991px)
+				max-width: 550px
 	.pricing
 		.section-header
 			max-width: 500px
+
+#about-pane
+	.pane-header
+		font-size: 70px
+		line-height: 120%
+		@media (min-width: 991px)
+			max-width: 600px
+	p
+		margin-bottom: 40px
+		font-size: 20px
+		line-height: 160%
 
 
 // footer
@@ -234,6 +253,8 @@ footer
 		a
 			font-size: 28px
 
+.submitted-message
+	text-align: center
 
 // join modal
 .modal
