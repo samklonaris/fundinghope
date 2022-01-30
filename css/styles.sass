@@ -2,24 +2,35 @@
 ---
 
 $background-color: #F5F3ED
-$primary-color: #101053
+$primary-color: #222222
 
+@font-face
+	font-family: "Sneak-Regular"
+	src: url('{{ site.baseurl }}/fonts/Sneak-Regular.woff')
+
+$default-font-family: "Sneak-Regular", sans-serif
 
 body
 	background-color: $background-color
 	color: $primary-color
+	font-family: $default-font-family
 	font-size: 16px
 	div
 		line-height: 32px
+	a
+		color: $primary-color	
+		padding-bottom: 1px
+		border-bottom: 1px solid transparent
+		&:hover
+			color: $primary-color	
+			border-bottom: 1px solid $primary-color
+			text-decoration: none
 
 .nav-container
 	display: flex
 	justify-content: center
-
-	a
-		color: $primary-color
+	.nav-item
 		padding: 27px 10px
-
 
 // Main Page
 .block-wrapper
@@ -30,8 +41,6 @@ body
 	.block
 		background-color: #ffffff
 		padding: 40px
-		.position
-			font-size: 37px
 
 .pane
 	padding: 70px 0px
@@ -92,7 +101,7 @@ body
 		text-align: center
 
 button.btn.btn-primary
-	padding: 9px 32px 12px
+	padding: 11px 32px 10px
 	background-color: $primary-color
 	color: #ffffff
 	border-radius: 25px
@@ -146,3 +155,43 @@ footer
 	.pricing
 		.section-header
 			max-width: 500px
+
+
+// footer
+footer
+	.section-header
+		font-size: 16px
+		line-height: 26px
+		margin-bottom: 20px
+	.footer-item
+		margin-bottom: 16px
+		font-size: 28px
+		color: $primary-color
+		a
+			font-size: 28px
+
+
+// join modal
+.modal
+	.modal-content
+		border: none
+		border-radius: 0px
+		-webkit-box-shadow: none
+		box-shadow: none
+		.modal-body
+			display: flex
+			flex-direction: column
+			align-items: center
+			padding: 40px 60px 70px
+			.close-button
+				font-size: 16px
+				margin-bottom: 40px
+				padding-bottom: 1px
+				border-bottom: 1px solid transparent
+				&:hover
+					cursor: pointer
+					border-bottom: 1px solid $primary-color
+			.form-label
+				font-size: 37px
+				line-height: 130%
+				margin-bottom: 40px
