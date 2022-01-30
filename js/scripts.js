@@ -12,7 +12,7 @@ function setup() {
 	$(window).on("load resize scroll", function() {
 	  $("#hero-pane").each(function() {
 	  	// No scroll on mobile
-  		if (window.innerWidth < 1190) {
+  		if (window.innerWidth < 990) {
   			return
   		}
 
