@@ -41,12 +41,24 @@ body
 	.block
 		background-color: #ffffff
 		padding: 40px
+	@media (max-width: 750px)
+		grid-template-columns: 1fr
 
 .pane
 	padding: 70px 0px
 	display: grid
 	grid-template-columns: repeat(2, minmax(0, 1fr))
 	grid-gap: 100px
+	@media (max-width: 992px)
+		grid-gap: 20px
+		img
+			width: 350px
+			height: 350px
+	@media (max-width: 750px)
+		padding: 35px
+		grid-template-columns: 1fr
+		img
+			margin: 0 auto
 
 .pane-header
 	font-size: 50px
@@ -54,21 +66,27 @@ body
 	margin-bottom: 20px
 	&.center
 		text-align: center
+	@media (min-width: 991px)
+		max-width: 380px
+	@media (max-width: 750px)
+		text-align: center
 
 #hero-pane
 	position: relative
 	.content-wrapper
 		padding-top: 70px
+		@media (max-width: 750px)
+			padding-top: 0px
 	.pane-header
 		margin-bottom: 40px
 	button
 		margin-bottom: 40px
-
 	#hero-2
 		position: absolute
 		bottom: -300px
 		right: 200px
-
+	@media (max-width: 750px)
+		padding-top: 35px
 
 .section-header
 	font-size: 37px
