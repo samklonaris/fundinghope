@@ -69,6 +69,8 @@ body
 	&.fixed-width
 		@media (min-width: 991px)
 			max-width: 380px
+			&.center
+				margin: 0 auto
 	@media (max-width: 750px)
 		text-align: center
 
@@ -95,6 +97,8 @@ body
 	line-height: 48px
 	&.center
 		text-align: center
+	@media (max-width: 750px)
+		margin-bottom: 40px
 
 .faq-wrapper
 	border-top: 1px solid $primary-color
@@ -175,8 +179,11 @@ button.btn.btn-primary
 			border: 1px solid $primary-color
 
 .email-form
-	input
-		margin-right: 10px
+	padding-bottom: 120px
+	@media (max-width: 750px)
+		padding-bottom: 60px
+	.pane-header
+		margin-bottom: 30px !important
 
 footer
 	background-color: #ffffff
