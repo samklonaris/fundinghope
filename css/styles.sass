@@ -58,11 +58,11 @@ body
 		grid-gap: 20px
 		&:not(#hero-pane)
 			img
-				width: 350px
-				height: 350px
+				width: 300px
+				height: 300px
 	@media (max-width: 750px)
 		padding: 35px
-		grid-template-columns: 1fr
+		display: block
 		img
 			margin: 0 auto
 
@@ -74,18 +74,20 @@ body
 		text-align: center
 	&.fixed-width
 		@media (min-width: 991px)
+			width: 100%
 			max-width: 425px
 			&.center
 				margin: 0 auto
 	@media (max-width: 750px)
 		text-align: center
+		font-size: 42px
 
 #hero-pane
 	position: relative
 	padding-bottom: 35px
 	.pane-header
 		margin-bottom: 40px
-	button
+	.button-wrapper
 		margin-bottom: 40px
 	#hero-1-hidden
 		position: relative
@@ -109,7 +111,7 @@ body
 			bottom: -380px
 
 	@media (max-width: 990px)
-		grid-template-columns: 1fr
+		display: block
 		padding-bottom: 70px
 		img
 			width: 45%
@@ -125,11 +127,12 @@ body
 		padding-bottom: 70px
 		#hero-1
 			position: relative
-			right: -70px
+			right: -50%
 		#hero-2
 			position: absolute
 			bottom: 15px
 			left: 40px
+			margin-bottom: 30px
 	@media (max-width: 750px)
 		padding-top: 35px
 
@@ -167,12 +170,16 @@ body
 	&.center
 		text-align: center
 
-button.btn.btn-primary
+a.button, button.btn.btn-primary
 	padding: 11px 32px 10px
 	background-color: $primary-color
 	color: #ffffff
 	border-radius: 25px
 	border: 1px solid $primary-color
+
+a.button
+	&:hover
+		color: #ffffff
 
 .hbspt-form
 	width: 100%
@@ -226,6 +233,10 @@ button.btn.btn-primary
 		padding-bottom: 60px
 	.pane-header
 		margin-bottom: 30px !important
+	.submitted-message
+		max-width: 700px
+		margin: 0 auto
+		text-align: left
 
 footer
 	background-color: #ffffff
@@ -264,8 +275,8 @@ footer
 			@media (min-width: 991px)
 				max-width: 900px
 		.description
-			font-size: 20px
-			line-height: 160%
+			font-size: 16px
+			line-height: 150%
 			@media (min-width: 991px)
 				max-width: 550px
 	.pricing
@@ -326,3 +337,15 @@ footer
 				font-size: 37px
 				line-height: 130%
 				margin-bottom: 40px
+	@media (max-width: 750px)
+		.hbspt-form
+			form
+				flex-direction: column
+			.field
+				display: block
+				width: 100%
+				margin-bottom: 15px
+			.hs_submit
+				display: block
+				max-width: 150px
+				margin: 0 auto
